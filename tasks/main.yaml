@@ -2,7 +2,7 @@
 # Add IP address via DNS lookup if just a hostname.
 - name: Discover SSH Hostnames & IPs for keyscan and set default SSH port.
   ansible.builtin.set_fact:
-    ssh_hosts: "{{ ssh.host }}{% if ssh.host | ipaddr is sameas false %},{{ lookup('pipe', 'dig +short ' + ssh.host) | replace('\n', ',')}}{% endif %}"
+    ssh_hosts: "{{ ssh.host }}{% if ssh.host | ansible.utils.ipaddr is sameas false %},{{ lookup('pipe', 'dig +short ' + ssh.host) | replace('\n', ',')}}{% endif %}"
     ssh_port: "{{ ssh.port | default(22) }}"
 
 - name: SSH Hostname(s) to check
