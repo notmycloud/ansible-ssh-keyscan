@@ -25,6 +25,10 @@ playbook.yaml
           host: host.ssh.lan    # We will perform a DNS lookup later so the IP address can be added to known hosts.
 ```
 
+## Dependencies
+Requires the `dig` command.
+This can be installed with the `dnsutils` package on Debian
+
 ## Support
 For support, please raise an issue and provide the following items
 - Sample task/playbook to replicate your issue
