@@ -1,3 +1,5 @@
+# This repository is archived in favor of notmycloud/ansible-ssh_keyscan (Yes, just a rename and a rewrite).
+
 # ansible-ssh-keyscan
 ## Description
 Simple role to alert on unknown SSH Fingerprint and allow for import to continue Playbook processing.
